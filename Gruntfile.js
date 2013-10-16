@@ -297,6 +297,12 @@ module.exports = function (grunt) {
             all: {
                 rjsConfig: '<%= yeoman.app %>/scripts/main.js'
             }
+        },
+        'gh-pages': {
+            options: {
+              base: '<%= yeoman.dist %>'
+            },
+            src: ['**']
         }
     });
 
