@@ -14,6 +14,7 @@ require.config({
         bootstrapTooltip: '../bower_components/sass-bootstrap/js/tooltip',
         bootstrapTransition: '../bower_components/sass-bootstrap/js/transition',
         bootstrapInputMask: 'vendor/bootstrap-inputmask',
+        bootstrapFileUpload: 'vendor/bootstrap-fileupload',
         jqueryValidate: 'vendor/jquery.validate'
     },
     shim: {
@@ -54,6 +55,9 @@ require.config({
             deps: ['jquery']
         },
         bootstrapInputMask: {
+            deps: ['jquery']
+        },
+        bootstrapFileUpload: {
             deps: ['jquery']
         },
         jqueryValidate: {

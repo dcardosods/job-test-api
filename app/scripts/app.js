@@ -1,5 +1,5 @@
 /*global define */
-define(['jquery', 'bootstrapModal', 'bootstrapInputMask', 'jqueryValidate'], function () {
+define(['jquery', 'bootstrapModal', 'bootstrapInputMask', 'bootstrapFileUpload', 'jqueryValidate'], function () {
     'use strict';
 
     $('#add-contact-form').validate({
