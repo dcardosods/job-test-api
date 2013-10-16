@@ -30,5 +30,17 @@ define(['jquery', 'bootstrapModal', 'bootstrapInputMask', 'jqueryValidate'], fun
         }
     });
 
+    $('.filter-contact').on('keyup', function () {
+        var inputId = this.id;
+        var regex = new RegExp($(this).val(), 'i');
+        var $searchableLines = $('.searchable tr');
+
+        $searchableLines.hide();
+        $searchableLines.filter(function () {
+            var textToFilter = $('.' + inputId, this).text();
+            return regex.test(textToFilter);
+        }).show();
+    });
+
     return '\'Allo \'Allo!';
 });

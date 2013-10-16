@@ -150,9 +150,69 @@
                             <th>Endereço</th>
                         </tr>
                     </thead>
+                    <tbody class="searchable">
+                        <tr>
+                            <td></td>
+                            <td class="filter-contact-name">Daniel Cardoso</td>
+                            <td class="filter-contact-email">dcs@gmail.com</td>
+                            <td class="filter-contact-phone">(51) 9843-4323</td>
+                            <td>Avenida Mauá, 453, São Leopoldo - RS -- CEP <span class="filter-contact-cep">23722-232</span></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="filter-contact-name">Maria João</td>
+                            <td class="filter-contact-email">maria@hotmail.com</td>
+                            <td class="filter-contact-phone">(54) 8743-4123</td>
+                            <td>Rua Cairú, 53, São Borja - RS -- CEP <span class="filter-contact-cep">10022-232</span></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="filter-contact-name">José Cardoso</td>
+                            <td class="filter-contact-email">jo_ds@gmail.com</td>
+                            <td class="filter-contact-phone">(51) 9992-0003</td>
+                            <td>Avenida Tiradentes, 43, São Leopoldo - RS -- CEP <span class="filter-contact-cep">23722-232</span></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="filter-contact-name">Daniel Marcos</td>
+                            <td class="filter-contact-email">dmarcos@gmail.com</td>
+                            <td class="filter-contact-phone">(41) 9843-4343</td>
+                            <td>Rua Charrua, 12323, Florianópolis - SC -- CEP <span class="filter-contact-cep">23132-123</span></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="filter-contact-name">Ana Silva</td>
+                            <td class="filter-contact-email">ana@gmail.com</td>
+                            <td class="filter-contact-phone">(41) 9877-000</td>
+                            <td>Avenida Central, 4223, Itajaí - SC -- CEP <span class="filter-contact-cep">54354-232</span></td>
+                        </tr>
+                    </tbody>
                 </table>
                 <div>
-                    <a data-toggle="modal" href="#add-contact-modal" class="btn btn-primary btn-lg">Adicionar Contato</a>
+                    <form action="" class="form-inline" role="form">
+                        <fieldset>
+                            <legend>Filtrar contatos</legend>
+                            <div class="form-group">
+                                <label class="sr-only" for="filter-contact-name">Nome</label>
+                                <input type="text" class="form-control filter-contact" id="filter-contact-name" name="filter-contact-name" placeholder="Nome">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="filter-contact-email">E-mail</label>
+                                <input type="email" class="form-control filter-contact" id="filter-contact-email" name="filter-contact-name" placeholder="E-mail">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="filter-contact-phone">Telefone</label>
+                                <input type="phone" class="form-control filter-contact" id="filter-contact-phone" name="filter-contact-name" placeholder="Telefone">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="filter-contact-cep">CEP</label>
+                                <input type="text" class="form-control filter-contact" id="filter-contact-cep" name="filter-contact-cep" placeholder="CEP">
+                            </div>
+                            <div class="form-group pull-right">
+                                <a data-toggle="modal" href="#add-contact-modal" class="btn btn-primary btn-lg">Adicionar Contato</a>
+                            </div>
+                        </fieldset>
+                    </form>
                 </div>
             </main>
 
