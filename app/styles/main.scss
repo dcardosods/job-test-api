@@ -5,3 +5,8 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 h1 {
     text-align: center;
 }
+
+.control-label.col-lg-12 {
+    text-align: left;
+    padding-bottom: 7px;
+}
