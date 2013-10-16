@@ -15,6 +15,26 @@
         <!-- endbuild -->
     </head>
     <body>
+
+        <!-- Modal Add Contact -->
+        <div class="modal fade" id="add-contact-modal" tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Adicionar contato</h4>
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-primary">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="container">
 
             <header>
@@ -35,6 +55,9 @@
                         </tr>
                     </thead>
                 </table>
+                <div>
+                    <a data-toggle="modal" href="#add-contact-modal" class="btn btn-primary btn-lg">Adicionar Contato</a>
+                </div>
             </main>
 
             <footer></footer>
