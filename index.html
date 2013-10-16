@@ -1,0 +1,251 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>teste api</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="stylesheet" href="styles/7bb6d1a1.main.css">
+    </head>
+    <body>
+
+        <!-- Modal Add Contact -->
+        <div class="modal fade" id="add-contact-modal" tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Adicionar contato</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <form action="" class="form-horizontal" id="add-contact-form" role="form">
+                            <fieldset>
+                                <div class="form-group">
+                                    <label for="contact-photo" class="col-lg-2 control-label">Imagem</label>
+                                    <div class="col-lg-10 fileupload fileupload-new" data-provides="fileupload">
+                                        <div class="fileupload-new thumbnail">
+                                            <img src="http://www.placehold.it/50x50/EFEFEF/AAAAAA&text=Minha%20Foto">
+                                        </div>
+                                        <div class="fileupload-preview fileupload-exists thumbnail"></div>
+                                        <span class="btn btn-file">
+                                            <span class="fileupload-new" id="contact-photo">Selecionar imagem</span>
+                                            <span class="fileupload-exists">Alterar</span>
+                                            <input type="file">
+                                        </span>
+                                        <a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remover</a>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-name" class="col-lg-2 control-label">Nome</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" class="form-control" id="contact-name" name="contact-name" placeholder="Nome" maxlenght="40">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-email" class="col-lg-2 control-label">E-mail</label>
+                                    <div class="col-lg-10">
+                                        <input type="email" class="form-control" id="contact-email" name="contact-email" placeholder="E-mail">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-phone" class="col-lg-2 control-label">Telefone</label>
+                                    <div class="col-lg-10">
+                                        <input type="phone" class="form-control" id="contact-phone" name="contact-phone" placeholder="Nome" data-mask="(99) 9999-9999">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-neighborhood" class="col-lg-12 control-label">Endereço</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-state" class="col-lg-3 control-label">UF</label>
+                                    <div class="col-lg-6">
+                                        <select class="form-control" id="contact-state" name="contact-state">
+                                            <option value="0">Selecione o Estado</option>
+                                            <option value="ac">Acre</option>
+                                            <option value="al">Alagoas</option>
+                                            <option value="ap">Amapá</option>
+                                            <option value="am">Amazonas</option>
+                                            <option value="ba">Bahia</option>
+                                            <option value="ce">Ceará</option>
+                                            <option value="df">Distrito Federal</option>
+                                            <option value="es">Espirito Santo</option>
+                                            <option value="go">Goiás</option>
+                                            <option value="ma">Maranhão</option>
+                                            <option value="ms">Mato Grosso do Sul</option>
+                                            <option value="mt">Mato Grosso</option>
+                                            <option value="mg">Minas Gerais</option>
+                                            <option value="pa">Pará</option>
+                                            <option value="pb">Paraíba</option>
+                                            <option value="pr">Paraná</option>
+                                            <option value="pe">Pernambuco</option>
+                                            <option value="pi">Piauí</option>
+                                            <option value="rj">Rio de Janeiro</option>
+                                            <option value="rn">Rio Grande do Norte</option>
+                                            <option value="rs">Rio Grande do Sul</option>
+                                            <option value="ro">Rondônia</option>
+                                            <option value="rr">Roraima</option>
+                                            <option value="sc">Santa Catarina</option>
+                                            <option value="sp">São Paulo</option>
+                                            <option value="se">Sergipe</option>
+                                            <option value="to">Tocantins</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-city" class="col-lg-3 control-label">Cidade</label>
+                                    <div class="col-lg-9">
+                                        <input type="text" class="form-control" id="contact-city" name="contact-city" placeholder="Cidade">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-patio" class="col-lg-3 control-label">Logradouro</label>
+                                    <div class="col-lg-9">
+                                        <input type="text" class="form-control" id="contact-patio" name="contact-patio" placeholder="Logradouro">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-neighborhood" class="col-lg-3 control-label">Bairro</label>
+                                    <div class="col-lg-9">
+                                        <input type="text" class="form-control" id="contact-neighborhood" name="contact-neighborhood" placeholder="Bairro">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-complementary-info" class="col-lg-3 control-label">Complemento</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control" id="contact-complementary-info" name="contact-complementary-info" placeholder="Complemento">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-number" class="col-lg-3 control-label">Número</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control" id="contact-number" name="contact-number" placeholder="Número">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-cep" class="col-lg-3 control-label">CEP</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control" id="contact-cep" name="contact-cep" placeholder="CEP" data-mask="99999-999">
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" form="add-contact-form" class="btn btn-primary">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <header>
+                <div class="jumbotron">
+                    <h1>Agenda de Contatos</h1>
+                </div>
+            </header>
+
+            <main>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Imagem</th>
+                            <th>Nome</th>
+                            <th>E-mail</th>
+                            <th>Telefone</th>
+                            <th>Endereço</th>
+                        </tr>
+                    </thead>
+                    <tbody class="searchable">
+                        <tr>
+                            <td><img src="http://www.placehold.it/50x50/EFEFEF/AAAAAA&text=Minha+Foto"></td>
+                            <td class="filter-contact-name">Daniel Cardoso</td>
+                            <td class="filter-contact-email">dcs@gmail.com</td>
+                            <td class="filter-contact-phone">(51) 9843-4323</td>
+                            <td>Avenida Mauá, 453, São Leopoldo - RS -- CEP <span class="filter-contact-cep">23722-232</span></td>
+                        </tr>
+                        <tr>
+                            <td><img src="http://www.placehold.it/50x50/EFEFEF/AAAAAA&text=Minha+Foto"></td>
+                            <td class="filter-contact-name">Maria João</td>
+                            <td class="filter-contact-email">maria@hotmail.com</td>
+                            <td class="filter-contact-phone">(54) 8743-4123</td>
+                            <td>Rua Cairú, 53, São Borja - RS -- CEP <span class="filter-contact-cep">10022-232</span></td>
+                        </tr>
+                        <tr>
+                            <td><img src="http://www.placehold.it/50x50/EFEFEF/AAAAAA&text=Minha+Foto"></td>
+                            <td class="filter-contact-name">José Cardoso</td>
+                            <td class="filter-contact-email">jo_ds@gmail.com</td>
+                            <td class="filter-contact-phone">(51) 9992-0003</td>
+                            <td>Avenida Tiradentes, 43, São Leopoldo - RS -- CEP <span class="filter-contact-cep">23722-232</span></td>
+                        </tr>
+                        <tr>
+                            <td><img src="http://www.placehold.it/50x50/EFEFEF/AAAAAA&text=Minha+Foto"></td>
+                            <td class="filter-contact-name">Daniel Marcos</td>
+                            <td class="filter-contact-email">dmarcos@gmail.com</td>
+                            <td class="filter-contact-phone">(41) 9843-4343</td>
+                            <td>Rua Charrua, 12323, Florianópolis - SC -- CEP <span class="filter-contact-cep">23132-123</span></td>
+                        </tr>
+                        <tr>
+                            <td><img src="http://www.placehold.it/50x50/EFEFEF/AAAAAA&text=Minha%20Foto"></td>
+                            <td class="filter-contact-name">Ana Silva</td>
+                            <td class="filter-contact-email">ana@gmail.com</td>
+                            <td class="filter-contact-phone">(41) 9877-000</td>
+                            <td>Avenida Central, 4223, Itajaí - SC -- CEP <span class="filter-contact-cep">54354-232</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <form action="" class="form-inline" role="form">
+                        <fieldset>
+                            <legend>Filtrar contatos</legend>
+                            <div class="form-group">
+                                <label class="sr-only" for="filter-contact-name">Nome</label>
+                                <input type="text" class="form-control filter-contact" id="filter-contact-name" name="filter-contact-name" placeholder="Nome">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="filter-contact-email">E-mail</label>
+                                <input type="email" class="form-control filter-contact" id="filter-contact-email" name="filter-contact-name" placeholder="E-mail">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="filter-contact-phone">Telefone</label>
+                                <input type="phone" class="form-control filter-contact" id="filter-contact-phone" name="filter-contact-name" placeholder="Telefone">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="filter-contact-cep">CEP</label>
+                                <input type="text" class="form-control filter-contact" id="filter-contact-cep" name="filter-contact-cep" placeholder="CEP">
+                            </div>
+                            <div class="form-group pull-right">
+                                <a data-toggle="modal" href="#add-contact-modal" class="btn btn-primary btn-lg">Adicionar Contato</a>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </main>
+
+            <footer></footer>
+
+        </div>
+
+
+        <script src="scripts/1137e1f5.vendor.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+
+        <script data-main="scripts/8813c92f.main" src="bower_components/requirejs/require.js"></script>
+</body>
+</html>
