@@ -4,8 +4,16 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 @import '../styles/vendor/bootstrap-fileupload';
 
+.jumbotron {
+    padding-top: 6px;
+    padding-bottom: 12px;
+}
 h1 {
     text-align: center;
+}
+
+.table tbody > tr > td {
+    vertical-align: middle;
 }
 
 .modal-body {
