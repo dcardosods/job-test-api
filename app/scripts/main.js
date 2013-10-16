@@ -13,7 +13,8 @@ require.config({
         bootstrapTab: '../bower_components/sass-bootstrap/js/tab',
         bootstrapTooltip: '../bower_components/sass-bootstrap/js/tooltip',
         bootstrapTransition: '../bower_components/sass-bootstrap/js/transition',
-        bootstrapInputMask: 'vendor/bootstrap-inputmask'
+        bootstrapInputMask: 'vendor/bootstrap-inputmask',
+        jqueryValidate: 'vendor/jquery.validate'
     },
     shim: {
         bootstrapAffix: {
@@ -54,11 +55,14 @@ require.config({
         },
         bootstrapInputMask: {
             deps: ['jquery']
+        },
+        jqueryValidate: {
+            deps: ['jquery']
         }
     }
 });
 
-require(['app', 'jquery', 'bootstrapModal', 'bootstrapInputMask'], function (app, $) {
+require(['app', 'jquery'], function (app, $) {
     'use strict';
     // use app here
     console.log(app);
